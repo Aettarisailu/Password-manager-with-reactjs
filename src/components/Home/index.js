@@ -2,16 +2,19 @@ import {Component} from 'react'
 import './index.css'
 import {v4} from 'uuid'
 
-const colorList = ['yello', 'orange', 'green', 'red', 'blue']
+const colorList = ['yellow', 'orange', 'green', 'red', 'blue']
 
 class Home extends Component {
-  state = {
-    website: '',
-    username: '',
-    password: '',
-    latestList: [],
-    isShows: false,
-    isTrue: false,
+  constructor(props) {
+    super(props)
+    this.state = {
+      website: '',
+      username: '',
+      password: '',
+      latestList: [],
+      isShows: false,
+      isTrue: false,
+    }
   }
 
   listenWebsitename = e => {
@@ -34,7 +37,7 @@ class Home extends Component {
     const newValue = {
       id: v4(),
       websiteName: website,
-      UserName: username,
+      userName: username,
       Password: password,
       initialValu: initial,
       addClass: classValue,
@@ -145,7 +148,7 @@ class Home extends Component {
                 value={password}
               />
             </div>
-            <button type="submit" className="add-btn ">
+            <button type="submit" className="add-btn">
               Add
             </button>
           </form>
@@ -184,7 +187,7 @@ class Home extends Component {
               id="check"
               onChange={this.showPassword}
             />
-            <label htmlFor="check" className="lable-password">
+            <label htmlFor="check" className="label-password">
               Show passwords
             </label>
           </div>
@@ -198,6 +201,7 @@ class Home extends Component {
               <p className="no-password">No Passwords</p>
             </div>
           )}
+
           {isTrue && (
             <ul className="result-container">
               {newList.map(eachValue => (
@@ -208,7 +212,7 @@ class Home extends Component {
                   <div className="List-content">
                     <p className="website">{eachValue.websiteName}</p>
                     <p className="website">{eachValue.userName}</p>
-                    <p className="website">{eachValue.Password}</p>
+
                     {!isShows && (
                       <img
                         src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"

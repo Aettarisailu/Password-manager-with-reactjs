@@ -159,6 +159,7 @@ body {
   height: 22px;
 }
 .search-element {
+  color: black;
   background-color: transparent;
   outline: none;
   border-style: none;
@@ -177,13 +178,14 @@ hr {
   align-self: flex-end;
 }
 .check-box {
+  color: #ffffff;
   width: 15px;
   height: 15px;
   margin-right: 10px;
   border-style: none;
   outline: none;
 }
-.lable-password {
+.label-password {
   color: #f8fafc;
   font-size: 12px;
 }
@@ -245,6 +247,7 @@ hr {
   color: #f8fafc;
 }
 .website {
+  color: #ffffff;
   font-size: 12px;
   margin: 2px;
 }
